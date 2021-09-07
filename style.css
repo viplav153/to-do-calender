@@ -1,0 +1,125 @@
+table {
+    border-collapse: collapse;
+    background: white;
+    color: black;
+    position: relative;
+}
+th, td { 
+    font-weight: bold;
+}
+td:hover{
+    background: rgb(136, 133, 133);  
+}
+#previous,#next {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 35px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 13%;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: relative;
+}
+#previous:hover,#next:hover {
+    background-color: #487249;
+    color: white;
+  }
+#previous{
+    padding: 16px 17px;
+    position: relative;
+}
+#button3{
+    background-color: #4c7faf; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: relative;
+}
+
+#jump_month{
+    background-color: #4c7faf; /* Green */
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 33%;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 32.5%;
+    position: relative;
+}
+.form-inline
+{
+    width:80%;
+    margin: 10px 10%;
+}
+
+#month,#year{
+
+    margin: 4px 2%;
+}
+
+#Form, #display{
+    width:80%;
+    margin: 10px 33%;
+
+}
+input{
+    width: 36%;
+}
+#heading
+{
+    margin:10px 8.7%;
+    font-weight: bold;
+    font-size: 20px;
+    font-size:1.3vw;
+}
+
+#display tr:nth-child(even){background-color: #f2f2f2;}
+#display tr:hover {background-color: #ddd;} 
+#display {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 35.5%;
+    position: relative;
+}
+#display td, #display th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    position: relative;
+}
+#display th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+    position: relative;
+}
+
+
+#close{
+    height: 4%;
+    width: 4%;
+    margin: 0% 0% 0% 40%;
+    position: relative;
+}
+#close:hover{
+    background: rgb(136, 133, 133);  
+}
+
+#subs{
+    color: rgb(224, 98, 24);
+}
+
+  
