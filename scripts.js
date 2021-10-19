@@ -230,3 +230,61 @@ function reply_click(clicked_id)
     l1.setAttribute('type',"text");
     l1.setAttribute('id',"fname");
     cell.appendChild(l1);
+    //submit BUTTON
+    str='save1('+c+')'
+    l1=document.createElement("Button");
+    l1.setAttribute('type',"submit");
+    l1.setAttribute('value',"submit");
+    l1.setAttribute('id',"button3");
+    l1.setAttribute('onclick',str);
+    cellText = document.createTextNode("SAVE");
+    l1.appendChild(cellText);
+    cell.appendChild(l1);
+
+    form.appendChild(cell)
+    let tbl = document.getElementById("display"); 
+    tbl.innerHTML = "";
+    if(localStorage.getItem(clicked_id+"1")!=null)
+    {
+        lis=JSON.parse(localStorage.getItem(clicked_id+"1"));
+        console.log(lis);
+        lis.forEach(myFunction);
+
+        function myFunction(value) {
+            let row = document.createElement("tr");
+            row.setAttribute("id","display_row");
+            let cell = document.createElement("td");
+            let cellText = document.createTextNode(value);
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+            tbl.appendChild(row); 
+        }
+
+    }
+
+}
+
+function save1(form_id)
+{
+    let a=[];
+    if(localStorage.getItem(form_id)!=null)
+    {
+        lis=JSON.parse(localStorage.getItem(form_id));
+        console.log(lis);
+
+        lis.forEach(myFunction);
+
+        function myFunction(value) {
+          a.push(value);
+        }
+
+    }
+    let Item= document.getElementById("fname").value;
+    a.push(Item);
+    localStorage.setItem(form_id,JSON.stringify(a));
+    console.log(Item);
+    let x=form_id;
+    reply_click((x/10)|0);
+
+}
+    
