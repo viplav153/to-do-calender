@@ -287,4 +287,27 @@ function save1(form_id)
     reply_click((x/10)|0);
 
 }
+function save1(form_id)
+{
+    let a=[];
+    if(localStorage.getItem(form_id)!=null)
+    {
+        lis=JSON.parse(localStorage.getItem(form_id));
+        console.log(lis);
+
+        lis.forEach(myFunction);
+
+        function myFunction(value) {
+          a.push(value);
+        }
+
+    }
+    let Item= document.getElementById("fname").value;
+    a.push(Item);
+    localStorage.setItem(form_id,JSON.stringify(a));
+    console.log(Item);
+    let x=form_id;
+    reply_click((x/10)|0);
+
+}
     
